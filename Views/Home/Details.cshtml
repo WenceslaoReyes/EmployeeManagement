@@ -1,0 +1,56 @@
+﻿@model HomeDetailsViewModel
+
+@{
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Details";
+    var imagePath = "~/img/" + (Model.Employee.PhotoPath ?? "unknown-person.png");
+}
+
+<div class="row justify-content-center m-3">
+    <div class="col-sm-8">
+        <div class="card">
+            <div class="card-header text-center">
+                <h1>@Model.Employee.Name</h1>
+            </div>
+        </div>       
+        <div class="card-body text-center">
+            <img class="card-img-top imagePhoto" src="@imagePath" alt="unknown person" asp-append-version="true"/>
+            <h4>@Model.Employee.Id</h4>
+            <h4>@Model.Employee.Email</h4>
+            <h4>@Model.Employee.Department</h4>
+        </div>
+        <div class="card-footer text-center">
+            <a asp-controller="Home" asp-action="Index" class="btn btn-primary">Back</a>
+            <a asp-action="Edit" asp-controller="Home" asp-route-id="@Model.Employee.Id" class="btn btn-primary">Edit</a>
+            <a href="#" class="btn btn-danger">Delete</a>
+        </div>
+    </div>
+</div>
+
+<!--
+    <h1>@*@ViewData["Title-Page"]*@ @*@ViewBag.title*@ @Model.Title</h1>
+    @*Useful when you send data through ViewData*@
+    @*@{
+        EmployeeManagement.Models.Employee Employee = ViewData["model"] as EmployeeManagement.Models.Employee;
+    }*@
+    <div>
+        @*@Employee.Id*@
+        @*@ViewBag.Id*@
+        @*@Model.Employee.Id*@
+    </div>
+    <div>
+        @*@Employee.Name*@
+        @*@ViewBag.model.Name*@
+        @*@Model.Employee.Name*@
+    </div>
+    <div>
+        @*@Employee.Email*@
+        @*@ViewBag.model.Email*@
+        @*@Model.Employee.Email*@
+    </div>
+    <div>
+        @*@Employee.Deparment*@
+        @*@ViewBag.model.Deparment*@
+        @*@Model.Employee.Department*@
+    </div>
+ -->

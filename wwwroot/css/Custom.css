@@ -1,0 +1,22 @@
+﻿.card-img-top{
+    max-width:200px;
+    align-self:center;
+}
+
+.btn{
+    margin:2px;
+}
+
+.row{
+    justify-content:center;
+}
+
+.imagePhoto{
+    height:200px;
+    width:auto;
+}
+
+.editPhoto{
+    display: flex;
+    justify-content :center;
+}

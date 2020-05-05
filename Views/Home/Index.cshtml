@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Employee>
+@{
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Index";
+}
+
+<div class="row">  
+        @foreach (var emp in Model)
+        {
+            var imagePath = "~/img/" + (emp.PhotoPath ?? "unknown-person.png");
+            <div class="card m-3">
+                <div class="card-header text-center">
+                    <h3>@emp.Name</h3>
+                </div>
+                <img class="card-img-top imagePhoto" src="@imagePath" alt="person photo" asp-append-version="true">
+                <div class="card-footer text-center">
+                    @*@Html.ActionLink("View", "Details", "Home", new { id = emp.Id })*@
+                    @*<a href="@Url.Action("Details","Home",new { id = emp.Id})" class="btn btn-primary">Show</a>*@
+                    <a asp-controller="Home" asp-action="Details" asp-route-id="@emp.Id" class="btn btn-primary">View</a>
+                    <a asp-action="Edit" asp-controller="Home" asp-route-id="@emp.Id" class="btn btn-primary">Edit</a>
+                    <a href="#" class="btn btn-danger">Delete</a>
+                </div>
+            </div>
+        }
+</div>
+
+@*<table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var emp in Model)
+            {
+                <tr>
+                    <td>@emp.Id</td>
+                    <td>@emp.Name</td>
+                    <td>@emp.Department</td>
+                    <td>@emp.Email</td>
+                </tr>
+            }
+        </tbody>
+    </table>*@
+@section Scripts {
+    <script src="~/js/Customer.js"></script>
+}
