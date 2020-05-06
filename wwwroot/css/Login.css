@@ -1,0 +1,67 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif, Arial;
+}
+
+.WrapperLogin {
+    height: 100vh;
+    width: 100vw;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-image: url("../img/photo-1.jpeg");
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    /*animation-name: animated-background;
+    animation-duration: 30s;
+    animation-direction: alternate-reverse;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;*/
+    transition:4s all;
+
+}
+
+@keyframes animated-background {
+    /*0% {
+        background-image: linear-gradient(to right, #4ca1af, #c4e0e5);
+    }*/
+
+    50% {
+        background-image: url("../img/photo-2.jpeg");
+    }
+
+    /*50% {
+        background-image: linear-gradient(to right, #5a3f37, #2c7744);
+    }
+
+    75% {
+        background-image: linear-gradient(to right, #eacda3, #d6ae7b);
+    }*/
+}
+
+.bodyLogin {
+    width: 50vw;
+    height: 50vh;
+    /*border: 4px solid #e8e1df;*/
+    background-image: url("../img/photo-6.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 4px;
+    background-color: #eadbd8;
+    box-shadow: 2px 3px 10px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.textLogin {
+    color: #67aaec;
+}
